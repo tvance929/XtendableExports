@@ -1,0 +1,4 @@
+C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XtendableExports.Tests\bin\Debug\XtendableExports.Tests.dll
+C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XtendableExports.Tests\bin\Debug\XtendableExports.Tests.pdb
+C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XtendableExports.Tests\obj\Debug\XtendableExports.Tests.dll
+C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XtendableExports.Tests\obj\Debug\XtendableExports.Tests.pdb
