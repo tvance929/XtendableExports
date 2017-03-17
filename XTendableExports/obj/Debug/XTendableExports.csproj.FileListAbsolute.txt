@@ -1,5 +1,4 @@
-C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XTendableExports\bin\Debug\XTendableExports.domain.dll
-C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XTendableExports\bin\Debug\XTendableExports.domain.pdb
-C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XTendableExports\obj\Debug\XTendableExports.csprojResolveAssemblyReference.cache
-C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XTendableExports\obj\Debug\XTendableExports.domain.dll
-C:\Users\toddv\Documents\Visual Studio 2015\Projects\XtendableExports\XTendableExports\obj\Debug\XTendableExports.domain.pdb
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports\bin\Debug\XTendableExports.domain.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports\bin\Debug\XTendableExports.domain.pdb
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports\obj\Debug\XTendableExports.domain.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports\obj\Debug\XTendableExports.domain.pdb

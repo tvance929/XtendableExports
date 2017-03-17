@@ -50,11 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DefaultDbConfiguration.cs" />
+    <Compile Include="EFContext.cs" />
+    <Compile Include="Mappings\AccountMap.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XTendableExports\XTendableExports.csproj">
+      <Project>{2EF6F3E6-493C-46DB-B7A1-733CFFDBF438}</Project>
+      <Name>XTendableExports</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
