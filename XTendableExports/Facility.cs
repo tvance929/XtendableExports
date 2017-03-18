@@ -4,7 +4,7 @@ namespace XTendableExports.domain
 {
     public class Facility
     {
-        public Guid Id { get; set; }
+        public Guid Key { get; set; }
         public string FacilityName { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }

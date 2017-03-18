@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mappings\AccountInsuranceMap.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="DefaultDbConfiguration.cs" />
     <Compile Include="EFContext.cs" />
     <Compile Include="Mappings\AccountMap.cs" />
@@ -59,6 +58,10 @@
     <Compile Include="Mappings\FacilityMap.cs" />
     <Compile Include="Mappings\InsuranceMap.cs" />
     <Compile Include="Mappings\PatientMap.cs" />
+    <Compile Include="Migrations\201703182118136_initial.cs" />
+    <Compile Include="Migrations\201703182118136_initial.Designer.cs">
+      <DependentUpon>201703182118136_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +74,11 @@
       <Project>{2EF6F3E6-493C-46DB-B7A1-733CFFDBF438}</Project>
       <Name>XTendableExports</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703182118136_initial.resx">
+      <DependentUpon>201703182118136_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

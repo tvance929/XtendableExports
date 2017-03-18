@@ -3,12 +3,12 @@ using XTendableExports.domain;
 
 namespace XTendableExports.data.Mappings
 {
-    public class InsuranceMap : EntityTypeConfiguration<Patient>
+    public class InsuranceMap : EntityTypeConfiguration<Insurance>
     {
         public InsuranceMap(string schema = "dbo")
         {
             ToTable("Insurances", schema);
-            HasKey(i => i.Id);
+            HasKey(i => i.Key);
         }
     }
 }

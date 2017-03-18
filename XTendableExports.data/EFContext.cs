@@ -15,32 +15,22 @@ namespace XTendableExports.data
         }
 
         public IDbSet<Account> Accounts { get; set; }
-        //public IDbSet<Consumer> Consumers { get; set; }
-        //public IDbSet<ConsumerHistory> ConsumerHistories { get; set; }
-        //public IDbSet<InsuranceCarrier> InsuranceCarriers { get; set; }
-        //public IDbSet<InsuranceGroup> InsuranceGroups { get; set; }
-        //public IDbSet<InsurancePlan> InsurancePlans { get; set; }
-        //public IDbSet<PayerType> PayerTypes { get; set; }
-        //public IDbSet<SpecialtyGroup> SpecialtyGroups { get; set; }
-        //public IDbSet<Specialty> Specialties { get; set; }
-        //public IDbSet<SchedulingVendorConfiguration> SchedulingVendorConfigurations { get; set; }
-        //public IDbSet<SchedulingVendorConfigurationHistory> SchedulingVendorConfigurationHistories { get; set; }
-        //public IDbSet<TrackedRequest> TrackedRequests { get; set; }
+        public IDbSet<AccountInsurance> AccountInsurances { get; set; }
+        public IDbSet<Client> Clients { get; set; }
+        public IDbSet<Export> Exports { get; set; }
+        public IDbSet<Facility> Facilities { get; set; }
+        public IDbSet<Insurance> Insurances { get; set; }
+        public IDbSet<Patient> Patients { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AccountMap());
-            //modelBuilder.Configurations.Add(new ConsumerMap());
-            //modelBuilder.Configurations.Add(new ConsumerHistoryMap());
-            //modelBuilder.Configurations.Add(new InsuranceGroupMap());
-            //modelBuilder.Configurations.Add(new InsuranceCarrierMap());
-            //modelBuilder.Configurations.Add(new InsurancePlanMap());
-            //modelBuilder.Configurations.Add(new PayerTypeMap());
-            //modelBuilder.Configurations.Add(new SpecialtyGroupMap());
-            //modelBuilder.Configurations.Add(new SpecialtyMap());
-            //modelBuilder.Configurations.Add(new SchedulingVendorConfigurationMap());
-            //modelBuilder.Configurations.Add(new SchedulingVendorConfigurationHistoryMap());
-            //modelBuilder.Configurations.Add(new TrackedRequestMap());
+            modelBuilder.Configurations.Add(new AccountInsuranceMap());
+            modelBuilder.Configurations.Add(new ClientMap());
+            modelBuilder.Configurations.Add(new ExportMap());
+            modelBuilder.Configurations.Add(new FacilityMap());
+            modelBuilder.Configurations.Add(new InsuranceMap());
+            modelBuilder.Configurations.Add(new PatientMap());
 
             base.OnModelCreating(modelBuilder);
         }

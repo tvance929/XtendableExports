@@ -8,9 +8,7 @@ namespace XTendableExports.data.Mappings
         public AccountInsuranceMap(string schema = "dbo")
         {
             ToTable("AccountInsurance", schema);
-            HasKey(a => a.Id);
-            this.HasRequired(a => a.Account).WithRequiredDependent();
-            this.HasRequired(a => a.Insurance).WithRequiredDependent();
+            HasKey(a => a.Key);
         }
     }
 }

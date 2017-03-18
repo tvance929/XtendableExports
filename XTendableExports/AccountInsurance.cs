@@ -1,9 +1,11 @@
-﻿namespace XTendableExports.domain
+﻿using System;
+
+namespace XTendableExports.domain
 {
     public class AccountInsurance
     {
-        public int Id;
-        public Account Account;
-        public Insurance Insurance;
+        public Guid Key { get; set; }
+        public Guid AccountId { get; set; }
+        public Guid InsuranceId { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace XTendableExports.data.Mappings
         public ExportMap(string schema = "dbo")
         {
             ToTable("Exports", schema);
-            HasKey(e => e.Id);
+            HasKey(e => e.Key);
         }
     }
 }
