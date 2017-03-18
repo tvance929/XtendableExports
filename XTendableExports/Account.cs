@@ -4,7 +4,7 @@ namespace XTendableExports.domain
 {
     public class Account
     {
-        public Guid Key { get; set; }
+        public Guid Id { get; set; }
         public Guid ClientId { get; set; }
         public Guid PatientId { get; set; }
         public Guid FacilityId { get; set; }

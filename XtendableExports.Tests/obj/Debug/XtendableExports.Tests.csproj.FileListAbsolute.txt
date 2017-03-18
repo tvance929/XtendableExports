@@ -1,4 +1,5 @@
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.Tests\bin\Debug\XtendableExports.Tests.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.Tests\bin\Debug\XtendableExports.Tests.pdb
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.Tests\obj\Debug\XtendableExports.Tests.csprojResolveAssemblyReference.cache
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.Tests\obj\Debug\XtendableExports.Tests.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.Tests\obj\Debug\XtendableExports.Tests.pdb

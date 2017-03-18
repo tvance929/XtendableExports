@@ -43,6 +43,13 @@
     <Compile Include="Account.cs" />
     <Compile Include="AccountInsurance.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="Contracts\Repositories\IAccountInsuranceRepository.cs" />
+    <Compile Include="Contracts\Repositories\IAccountRepository.cs" />
+    <Compile Include="Contracts\Repositories\IClientRepository.cs" />
+    <Compile Include="Contracts\Repositories\IExportRepository.cs" />
+    <Compile Include="Contracts\Repositories\IFacilityRepository.cs" />
+    <Compile Include="Contracts\Repositories\IInsuranceRepository.cs" />
+    <Compile Include="Contracts\Repositories\IPatientRepository.cs" />
     <Compile Include="Export.cs" />
     <Compile Include="Facility.cs" />
     <Compile Include="Insurance.cs" />
@@ -50,7 +57,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contracts\Repositories\" />
     <Folder Include="Contracts\Services\" />
     <Folder Include="Enums\" />
   </ItemGroup>

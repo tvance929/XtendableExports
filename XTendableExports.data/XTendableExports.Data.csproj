@@ -58,26 +58,34 @@
     <Compile Include="Mappings\FacilityMap.cs" />
     <Compile Include="Mappings\InsuranceMap.cs" />
     <Compile Include="Mappings\PatientMap.cs" />
-    <Compile Include="Migrations\201703182118136_initial.cs" />
-    <Compile Include="Migrations\201703182118136_initial.Designer.cs">
-      <DependentUpon>201703182118136_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201703182127179_initial.cs" />
+    <Compile Include="Migrations\201703182127179_initial.Designer.cs">
+      <DependentUpon>201703182127179_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AccountInsuranceRepository.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\PatientRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XtendableExports.web\XtendableExports.Web.csproj">
+      <Project>{3FD930B8-EC98-4519-B249-91C26484B3E1}</Project>
+      <Name>XtendableExports.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XTendableExports\XTendableExports.csproj">
       <Project>{2EF6F3E6-493C-46DB-B7A1-733CFFDBF438}</Project>
       <Name>XTendableExports</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703182118136_initial.resx">
-      <DependentUpon>201703182118136_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703182127179_initial.resx">
+      <DependentUpon>201703182127179_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

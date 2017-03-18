@@ -8,7 +8,7 @@ namespace XTendableExports.domain
 {
     public class Export
     {
-        public Guid Key { get; set; }
+        public Guid Id { get; set; }
         public string Delimeter { get; set; }
         public string Fields { get; set; }
     }

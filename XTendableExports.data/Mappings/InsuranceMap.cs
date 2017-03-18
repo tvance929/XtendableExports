@@ -8,7 +8,7 @@ namespace XTendableExports.data.Mappings
         public InsuranceMap(string schema = "dbo")
         {
             ToTable("Insurances", schema);
-            HasKey(i => i.Key);
+            HasKey(i => i.Id);
         }
     }
 }
