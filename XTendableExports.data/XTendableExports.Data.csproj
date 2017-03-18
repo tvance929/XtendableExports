@@ -49,10 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappings\AccountInsuranceMap.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DefaultDbConfiguration.cs" />
     <Compile Include="EFContext.cs" />
     <Compile Include="Mappings\AccountMap.cs" />
+    <Compile Include="Mappings\ClientMap.cs" />
+    <Compile Include="Mappings\ExportMap.cs" />
+    <Compile Include="Mappings\FacilityMap.cs" />
+    <Compile Include="Mappings\InsuranceMap.cs" />
+    <Compile Include="Mappings\PatientMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

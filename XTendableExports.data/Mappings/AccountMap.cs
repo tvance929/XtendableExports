@@ -7,11 +7,11 @@ namespace XTendableExports.data.Mappings
     {
         public AccountMap(string schema = "dbo")
         {
-            //ToTable("Consumers", schema);
-            //HasKey(t => t.AccountKey);
-            //Property(t => t.Version).IsRowVersion();
-
-            //this.HasRequired(a => a.Account).WithRequiredDependent();
+            ToTable("Accounts", schema);
+            HasKey(a => a.Id);
+            this.HasRequired(a => a.Client).WithRequiredDependent();
+            this.HasRequired(a => a.Patient).WithRequiredDependent();
+            this.HasRequired(a => a.Facility).WithRequiredDependent();
         }
     }
 }
