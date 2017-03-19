@@ -10,11 +10,75 @@
 </div>
 
 <div class="row">
-
+    <select id="PremadeExports"></select>
 </div>
 @section Scripts
 {
     <script>
-        
+        fillDropDown('/Home/GetPremadeExports', $('#PremadeExports'))
+        function fillDropDown(url, dropDownElement) {
+            $.ajax({
+                url: url,
+                dataType: 'json',
+                async: false,
+                success: function (result) {
+                    dropDownElement.empty();
+                    if ($(dropDownElement).hasClass('insuranceGroupSelects')) {
+                        dropDownElement.append($('<option/>', {
+                            value: ''
+                        }).html('Select An Insurance Group'));
+                    } else if ($(dropDownElement).attr('id') == 'specialtyGroupSelect') {
+                        dropDownElement.append($('<option/>', {
+                            value: ''
+                        }).html(' Select A Specialty '));
+                    } else if ($(dropDownElement).attr('id') == 'primaryInsuranceCarrier') {
+                        dropDownElement.append($('<option/>', {
+                            value: ''
+                        }).html(' Select An Insurance Carrier '));
+                    } else {
+                        dropDownElement.append($('<option/>', {
+                            value: ''
+                        }).html(' Select A Payer Type '));
+                    }
+                    $(result).each(function () {
+                        //NONE FOUND returns a .Message
+                        if (this.Message) {
+                            this.Id = "";
+                            this.Name = this.Message;
+                        };
+                        if ($(dropDownElement).hasClass('insuranceGroupSelects') || $(dropDownElement).attr('id') == 'primaryInsuranceCarrier') {
+                            dropDownElement.append(
+                                $('<option/>', {
+                                    value: this.Key
+                                }).html(this.Name));
+                        } else if ($(dropDownElement).attr('id') == 'specialtyGroupSelect') {
+                            dropDownElement.append($('<optgroup/>', { label: this.Name + '(' + this.Code + ')' })); //.html(this.Name + ' (' + this.Code + ')'));
+
+                            for (var i = 0; i < this.Specialties.length; i++) {
+                                dropDownElement.append($('<option/>', { value: this.Specialties[i].Key }).html(this.Specialties[i].Name + ' (' + this.Specialties[i].Code + ')'));
+                            };
+                        } else {
+                            dropDownElement.append(
+                            $('<option/>', {
+                                value: this.Code
+                            }).html(this.Name));
+                        }
+                    });
+                },
+                error: function (jqXHR, error) {
+                    dropDownElement.empty();
+                    if ($(dropDownElement).attr('id') == 'specialtyGroupSelect') {
+                        $("#specialtyGroupSelect").select2('destroy');
+                    }
+                    dropDownElement.append($('<option/>', {
+                        value: '',
+                        selected: 'selected'
+                    }).html('** API ERROR - COULD NOT RETRIEVE VALUES **'))
+                        .addClass('ddError')
+                        .removeAttr('multiple');
+
+                }
+            });
+        }
     </script>
 }

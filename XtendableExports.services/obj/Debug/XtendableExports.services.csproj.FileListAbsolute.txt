@@ -3,3 +3,5 @@ C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableE
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.services\obj\Debug\XtendableExports.Services.csprojResolveAssemblyReference.cache
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.services\obj\Debug\XtendableExports.services.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.services\obj\Debug\XtendableExports.services.pdb
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.services\bin\Debug\XTendableExports.domain.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.services\bin\Debug\XTendableExports.domain.pdb

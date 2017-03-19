@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XTendableExports.domain
+namespace XTendableExports.Domain
 {
     public class Client
     {

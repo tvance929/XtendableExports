@@ -1,30 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Mvc;
+using XtendableExports.Models;
+using XTendableExports.Domain.Contracts.Services;
 
 namespace XtendableExports.Controllers
 {
     public class HomeController : Controller
     {
+        IExportService exportService;
+
+        public HomeController(IExportService exportService)
+        {
+            this.exportService = exportService;
+        }
+
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet]
+        public async Task<IEnumerable<ExportViewModel>> GetPremadeExports()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+                var response = await this.exportService.GetAllAsync();
+                return response;
         }
     }
 }

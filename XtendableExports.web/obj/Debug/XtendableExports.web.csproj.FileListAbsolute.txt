@@ -43,6 +43,8 @@ C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableE
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\System.Web.WebPages.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\System.Web.WebPages.Razor.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\WebGrease.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.domain.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.domain.pdb
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\AutoMapper.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Ninject.xml

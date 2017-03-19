@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace XTendableExports.domain.Contracts.Repositories
+namespace XTendableExports.Domain.Contracts.Repositories
 {
     public interface IFacilityRepository
     {

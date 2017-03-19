@@ -67,6 +67,9 @@
     <Compile Include="Repositories\AccountInsuranceRepository.cs" />
     <Compile Include="Repositories\AccountRepository.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\ExportRepository.cs" />
+    <Compile Include="Repositories\FacilityRepository.cs" />
+    <Compile Include="Repositories\InsuranceRepository.cs" />
     <Compile Include="Repositories\PatientRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,10 +77,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XtendableExports.web\XtendableExports.Web.csproj">
-      <Project>{3FD930B8-EC98-4519-B249-91C26484B3E1}</Project>
-      <Name>XtendableExports.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XTendableExports\XTendableExports.csproj">
       <Project>{2EF6F3E6-493C-46DB-B7A1-733CFFDBF438}</Project>
       <Name>XTendableExports</Name>

@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using XTendableExports.data.Mappings;
-using XTendableExports.domain;
+using XTendableExports.Domain;
 
 namespace XTendableExports.data
 {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using XTendableExports.domain;
-using XTendableExports.domain.Contracts.Repositories;
+using XTendableExports.Domain;
+using XTendableExports.Domain.Contracts.Repositories;
 
 namespace XTendableExports.data.Repositories
 {

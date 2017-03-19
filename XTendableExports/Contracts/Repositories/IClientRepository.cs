@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XTendableExports.domain.Contracts.Repositories
+namespace XTendableExports.Domain.Contracts.Repositories
 {
     public interface IClientRepository
     {

@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using XTendableExports.domain;
+using XTendableExports.Domain;
 
 namespace XTendableExports.data.Mappings
 {

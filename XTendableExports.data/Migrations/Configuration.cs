@@ -2,8 +2,7 @@ namespace XTendableExports.data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    using domain;
-    using XtendableExports.Models;
+    using Domain;
 
     internal sealed class Configuration : DbMigrationsConfiguration<EFContext>
     {

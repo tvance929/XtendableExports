@@ -50,16 +50,15 @@
     <Compile Include="Contracts\Repositories\IFacilityRepository.cs" />
     <Compile Include="Contracts\Repositories\IInsuranceRepository.cs" />
     <Compile Include="Contracts\Repositories\IPatientRepository.cs" />
+    <Compile Include="Contracts\Services\IExportService.cs" />
     <Compile Include="Export.cs" />
     <Compile Include="Facility.cs" />
     <Compile Include="Insurance.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\Services\" />
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

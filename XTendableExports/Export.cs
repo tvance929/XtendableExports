@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XTendableExports.domain
+namespace XTendableExports.Domain
 {
     public class Export
     {
