@@ -27,19 +27,10 @@ namespace XtendableExports.Controllers
         [HttpGet]
         public async Task<string> GetPremadeExports()
         {
-            try
-            {
-                var exports = await this.exportService.GetAllAsync();
-                var exportvms = exports.Select(Mapper.Map<Export, ExportViewModel>).ToList();
-                var serializer = new JavaScriptSerializer();
-                return serializer.Serialize(exportvms);
-            }
-            catch (System.Exception ex)
-            {
-                var test = ex;
-                throw;
-            }
-
+            var exports = await this.exportService.GetAllAsync();
+            var exportvms = exports.Select(Mapper.Map<Export, ExportViewModel>).ToList();
+            var serializer = new JavaScriptSerializer();
+            return serializer.Serialize(exportvms);
         }
     }
 }

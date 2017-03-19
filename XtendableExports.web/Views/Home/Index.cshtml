@@ -11,6 +11,7 @@
 
 <div class="row">
     <select id="PremadeExports"></select>
+    <button id="#btnPremadeExports">Use Export</button>
 </div>
 @section Scripts
 {
@@ -31,40 +32,22 @@
                         dropDownElement.append($('<option/>', {
                             value: ''
                         }).html('Premade Exports'));
-                                        $(result).each(function () {
-
+                        $(result).each(function () {
                             dropDownElement.append(
                                 $('<option/>', {
                                     value: this.id
                                 }).html(this.Name));
-                        } else if ($(dropDownElement).attr('id') == 'specialtyGroupSelect') {
-                            dropDownElement.append($('<optgroup/>', { label: this.Name + '(' + this.Code + ')' })); //.html(this.Name + ' (' + this.Code + ')'));
-
-                            for (var i = 0; i < this.Specialties.length; i++) {
-                                dropDownElement.append($('<option/>', { value: this.Specialties[i].Key }).html(this.Specialties[i].Name + ' (' + this.Specialties[i].Code + ')'));
-                            };
-                        } else {
-                            dropDownElement.append(
-                            $('<option/>', {
-                                value: this.Code
-                            }).html(this.Name));
-                        }
-                    });
-        },
-        error: function (jqXHR, error) {
-            dropDownElement.empty();
-            if ($(dropDownElement).attr('id') == 'specialtyGroupSelect') {
-                $("#specialtyGroupSelect").select2('destroy');
-            }
-            dropDownElement.append($('<option/>', {
-                value: '',
-                selected: 'selected'
-            }).html('** API ERROR - COULD NOT RETRIEVE VALUES **'))
-                .addClass('ddError')
-                .removeAttr('multiple');
-
-        }
-        });
+                        });
+                    }
+                },
+                error: function (jqXHR, error) {
+                    dropDownElement.append($('<option/>', {
+                        value: '',
+                        selected: 'selected'
+                    }).html('ERROR'))
+                        .addClass('ddError');
+                }
+            });
         }
     </script>
 }

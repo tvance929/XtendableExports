@@ -12,5 +12,11 @@ namespace XtendableExports.Models
 
         [Required]
         public string Fields { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public string FileFormat { get; set; }
     }
 }
