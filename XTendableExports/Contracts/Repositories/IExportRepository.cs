@@ -8,7 +8,7 @@ namespace XTendableExports.Domain.Contracts.Repositories
 {
     public interface IExportRepository
     {
-        Task<IEnumerable<Export>> GetAllAsync();
+        Task<List<Export>> GetAllAsync();
         Task<Export> GetAsync(Guid id);
     }
 }

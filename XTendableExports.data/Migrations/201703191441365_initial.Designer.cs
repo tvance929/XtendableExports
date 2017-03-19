@@ -13,7 +13,7 @@ namespace XTendableExports.data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703182127179_initial"; }
+            get { return "201703191441365_initial"; }
         }
         
         string IMigrationMetadata.Source

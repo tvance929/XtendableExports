@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
+using AutoMapper;
 using XtendableExports.Models;
+using XTendableExports.Domain;
 using XTendableExports.Domain.Contracts.Services;
 
 namespace XtendableExports.Controllers
@@ -22,10 +25,21 @@ namespace XtendableExports.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ExportViewModel>> GetPremadeExports()
+        public async Task<string> GetPremadeExports()
         {
-                var response = await this.exportService.GetAllAsync();
-                return response;
+            try
+            {
+                var exports = await this.exportService.GetAllAsync();
+                var exportvms = exports.Select(Mapper.Map<Export, ExportViewModel>).ToList();
+                var serializer = new JavaScriptSerializer();
+                return serializer.Serialize(exportvms);
+            }
+            catch (System.Exception ex)
+            {
+                var test = ex;
+                throw;
+            }
+
         }
     }
 }

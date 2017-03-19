@@ -58,9 +58,9 @@
     <Compile Include="Mappings\FacilityMap.cs" />
     <Compile Include="Mappings\InsuranceMap.cs" />
     <Compile Include="Mappings\PatientMap.cs" />
-    <Compile Include="Migrations\201703182127179_initial.cs" />
-    <Compile Include="Migrations\201703182127179_initial.Designer.cs">
-      <DependentUpon>201703182127179_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201703191441365_initial.cs" />
+    <Compile Include="Migrations\201703191441365_initial.Designer.cs">
+      <DependentUpon>201703191441365_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,8 +83,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703182127179_initial.resx">
-      <DependentUpon>201703182127179_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703191441365_initial.resx">
+      <DependentUpon>201703191441365_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

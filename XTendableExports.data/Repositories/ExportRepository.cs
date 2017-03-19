@@ -10,7 +10,7 @@ namespace XTendableExports.data.Repositories
 {
     public class ExportRepository : IExportRepository
     {
-        public async Task<IEnumerable<Export>> GetAllAsync()
+        public async Task<List<Export>> GetAllAsync()
         {
             using (var context = new EFContext())
             {
