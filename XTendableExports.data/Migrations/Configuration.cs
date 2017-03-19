@@ -40,6 +40,11 @@ namespace XTendableExports.data.Migrations
                 new AccountInsurance { Id = Guid.NewGuid(), AccountId = account4.Id, InsuranceId = blueCrossBS.Id },
                 new AccountInsurance { Id = Guid.NewGuid(), AccountId = account5.Id, InsuranceId = americanFamily.Id }
                 );
+
+            context.Exports.AddOrUpdate(
+                new Export { Id = Guid.NewGuid(), Name = "GeneralHospitals-AccountInfo", Delimeter = "|", Fields = "Account~*,Patient~LastName/FirstName/MiddleName", FileNameFormat = "yyyymmdd-gh.data.dat" },
+                new Export { Id = Guid.NewGuid(), Name = "VeteransHospital-AccountFacilityInfo", Delimeter = ",", Fields = "Facility~*~[unique],Account~*,Insurance~*,Patient~SocialSecurityNumber", FileNameFormat = "yyyymmdd-gh.data.bat" }
+                );
         }
     }
 }

@@ -12,3 +12,4 @@ C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableE
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports.data\obj\Debug\XTendableExports.data.pdb
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports.data\obj\Debug\XTendableExports.data.Migrations.initial.resources
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports.data\obj\Debug\XTendableExports.Data.csproj.GenerateResource.Cache
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XTendableExports.data\obj\Debug\XTendableExports.data.Migrations.changingexports.resources
