@@ -17,6 +17,6 @@ namespace XtendableExports.Models
         public string Name { get; set; }
 
         [Required]
-        public string FileFormat { get; set; }
+        public string FileNameFormat { get; set; }
     }
 }

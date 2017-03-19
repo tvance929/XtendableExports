@@ -10,22 +10,23 @@ namespace XTendableExports.data.Repositories
 {
     public class AccountInsuranceRepository : IAccountInsuranceRepository
     {
+        EFContext context;
+
+        public AccountInsuranceRepository(EFContext context)
+        {
+            this.context = context;
+        }
+
         public async Task<IEnumerable<AccountInsurance>> GetAllAsync()
         {
-            using (var context = new EFContext())
-            {
-                var accountInsurances = context.AccountInsurances;
-                return await accountInsurances.ToListAsync();
-            }
+            var accountInsurances = this.context.AccountInsurances;
+            return await accountInsurances.ToListAsync();
         }
 
         public async Task<AccountInsurance> GetAsync(Guid id)
         {
-            using (var context = new EFContext())
-            {
-                var accountInsurance = await context.AccountInsurances.Where(a => a.Id == id).FirstOrDefaultAsync();
-                return accountInsurance;
-            }
+            var accountInsurance = await this.context.AccountInsurances.Where(a => a.Id == id).FirstOrDefaultAsync();
+            return accountInsurance;
         }
     }
 }

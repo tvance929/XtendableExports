@@ -22,5 +22,12 @@ namespace XtendableExports.services
         {
             return await this.exportRepository.GetAllAsync();
         }
+
+        public async Task AddAsync(Export export)
+        {
+            //TODO:  Implement this for adding new custom exports
+            throw new NotImplementedException();
+        }
     }
 }
+

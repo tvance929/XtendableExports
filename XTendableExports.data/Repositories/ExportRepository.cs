@@ -10,22 +10,29 @@ namespace XTendableExports.data.Repositories
 {
     public class ExportRepository : IExportRepository
     {
+        EFContext context;
+
+        public ExportRepository(EFContext context)
+        {
+            this.context = context;
+        }
+
         public async Task<List<Export>> GetAllAsync()
         {
-            using (var context = new EFContext())
-            {
-                var exports = context.Exports;
-                return await exports.ToListAsync();
-            }
+            var exports = this.context.Exports;
+            return await exports.ToListAsync();
         }
 
         public async Task<Export> GetAsync(Guid id)
         {
-            using (var context = new EFContext())
-            {
-                var export = await context.Exports.Where(a => a.Id == id).FirstOrDefaultAsync();
-                return export;
-            }
+            var export = await this.context.Exports.Where(a => a.Id == id).FirstOrDefaultAsync();
+            return export;
+        }
+
+        public async Task AddAsync(Export export)
+        {
+            this.context.Exports.Add(export);
+            await context.SaveChangesAsync();
         }
     }
 }

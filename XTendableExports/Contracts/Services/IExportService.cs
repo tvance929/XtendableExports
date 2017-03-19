@@ -9,5 +9,6 @@ namespace XTendableExports.Domain.Contracts.Services
     public interface IExportService
     {
         Task<IEnumerable<Export>> GetAllAsync();
+        Task AddAsync(Export export);
     }
 }

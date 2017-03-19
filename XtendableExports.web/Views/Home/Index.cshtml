@@ -10,13 +10,49 @@
 </div>
 
 <div class="row">
-    <select id="PremadeExports"></select>
-    <button id="#btnPremadeExports">Use Export</button>
+    <div class="col-md-6">
+        <select id="ddPremadeExports"></select>
+        <button id="btnPremadeExports">Use Export</button>
+    </div>
+    <div class="col-md-6">
+        <div id="exportDetails">
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <hr />
+    Template Creator Here:
 </div>
 @section Scripts
 {
     <script>
-        fillDropDown('/Home/GetPremadeExports', $('#PremadeExports'))
+        fillDropDown('/Home/GetPremadeExports', $('#ddPremadeExports'));
+
+        $('#btnPremadeExports').prop('disabled', false);
+
+        $('#ddPremadeExports').change(function () {
+            $('#exportDetails').html('');
+            $('#btnPremadeExports').prop('disabled', true);
+
+            if ($(this).val() != '') {
+                $('#btnPremadeExports').prop('disabled', false);
+                $('#exportDetails').html(
+                    'NAME : ' + $("option:selected", this).text() +
+                    '<br/>DELIMETER : ' + $("option:selected", this).attr('data-delimeter') +
+                    '<br/>FIELDS : ' + $("option:selected", this).attr('data-fields') +
+                    '<br/>FILE NAME FORMAT : ' + $("option:selected", this).attr('data-filenameformat')
+                    );
+            }
+        });
+
+        $('#btnPremadeExports').on('click', function () {
+            if ($('#ddPremadeExports').val() != '') {
+                window.location = '/Home/GetExport?id=' + $('#ddPremadeExports').val();
+            }
+            return false;
+        })
+
         function fillDropDown(url, dropDownElement) {
             $.ajax({
                 url: url,
@@ -35,8 +71,12 @@
                         $(result).each(function () {
                             dropDownElement.append(
                                 $('<option/>', {
-                                    value: this.id
-                                }).html(this.Name));
+                                    value: this.Id
+                                })
+                                .attr('data-delimeter', this.Delimeter)
+                                .attr('data-fields', this.Fields)
+                                .attr('data-filenameformat', this.FileNameFormat)
+                                .html(this.Name));
                         });
                     }
                 },

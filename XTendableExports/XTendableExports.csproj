@@ -50,6 +50,7 @@
     <Compile Include="Contracts\Repositories\IFacilityRepository.cs" />
     <Compile Include="Contracts\Repositories\IInsuranceRepository.cs" />
     <Compile Include="Contracts\Repositories\IPatientRepository.cs" />
+    <Compile Include="Contracts\Services\IExportFileService.cs" />
     <Compile Include="Contracts\Services\IExportService.cs" />
     <Compile Include="Export.cs" />
     <Compile Include="Facility.cs" />

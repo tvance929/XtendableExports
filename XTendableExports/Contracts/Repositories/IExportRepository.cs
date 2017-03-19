@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace XTendableExports.Domain.Contracts.Repositories
@@ -10,5 +8,6 @@ namespace XTendableExports.Domain.Contracts.Repositories
     {
         Task<List<Export>> GetAllAsync();
         Task<Export> GetAsync(Guid id);
+        Task AddAsync(Export export);
     }
 }
