@@ -14,10 +14,12 @@ namespace XtendableExports.Controllers
     public class HomeController : Controller
     {
         IExportService exportService;
+        IExportFileService exportFileService;
 
-        public HomeController(IExportService exportService)
+        public HomeController(IExportService exportService, IExportFileService exportFileService)
         {
             this.exportService = exportService;
+            this.exportFileService = exportFileService;
         }
 
         [Authorize]
@@ -36,22 +38,14 @@ namespace XtendableExports.Controllers
         }
 
         [HttpGet]
-        public void GetExport(string id)
+        public async Task GetExport(string id)
         {
-            User.Identity.GetUserName()
-            MemoryStream ms = new MemoryStream();
-            TextWriter tw = new StreamWriter(ms);
-            tw.WriteLine("Line 1");
-            tw.WriteLine("Line 2");
-            tw.WriteLine("Line 3");
-            tw.Flush();
-            byte[] bytes = ms.ToArray();
-            ms.Close();
+            var byteFile = await this.exportFileService.GetExportFileAsync(id, User.Identity.GetUserName());
 
             Response.Clear();
             Response.ContentType = "application/force-download";
-            Response.AddHeader("content-disposition", "attachment;    filename=file.txt");
-            Response.BinaryWrite(bytes);
+            Response.AddHeader("content-disposition", "attachment; filename=file.txt");
+            Response.BinaryWrite(byteFile);
             Response.End();
         }
     }

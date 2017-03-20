@@ -7,8 +7,8 @@
     <ProjectGuid>{2EF6F3E6-493C-46DB-B7A1-733CFFDBF438}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XTendableExports.domain</RootNamespace>
-    <AssemblyName>XTendableExports.domain</AssemblyName>
+    <RootNamespace>XTendableExports.Domain</RootNamespace>
+    <AssemblyName>XTendableExports.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

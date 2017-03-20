@@ -9,12 +9,7 @@ namespace mhd.Aggregator.Registry.Api.Config.NinjectModules
         public override void Load()
         {
             Bind<IExportService>().To<ExportService>();
-            //Bind<IClientRepository>().To<ClientRepository>();
-            //Bind<IExportRepository>().To<ExportRepository>();
-            //Bind<IPatientRepository>().To<PatientRepository>();
-            //Bind<IInsuranceRepository>().To<InsuranceRepository>();
-            //Bind<IAccountInsuranceRepository>().To<AccountInsuranceRepository>();
-            //Bind<IFacilityRepository>().To<FacilityRepository>();
+            Bind<IExportFileService>().To<ExportFileService>();
         }
     }
 }

@@ -1,4 +1,3 @@
-C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\obj\Debug\XtendableExports.Web.csprojResolveAssemblyReference.cache
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\roslyn\csc.exe
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -48,11 +47,11 @@ C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableE
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\WebActivatorEx.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\WebGrease.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.data.dll
-C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.domain.dll
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.Domain.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XtendableExports.services.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.data.pdb
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XtendableExports.services.pdb
-C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.domain.pdb
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\XTendableExports.Domain.pdb
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\AutoMapper.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Ninject.xml
@@ -81,5 +80,6 @@ C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableE
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\obj\Debug\XtendableExports.Web.csprojResolveAssemblyReference.cache
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\obj\Debug\XtendableExports.dll
 C:\Users\toddv\documents\visual studio 2015\Projects\XtendableExports\XtendableExports.web\obj\Debug\XtendableExports.pdb

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace XTendableExports.domain.Contracts.Services
+namespace XTendableExports.Domain.Contracts.Services
 {
-    class IExportFileService
+    public interface IExportFileService
     {
+        Task<byte[]> GetExportFileAsync(string exportId, string loggedInUserName);
     }
 }
