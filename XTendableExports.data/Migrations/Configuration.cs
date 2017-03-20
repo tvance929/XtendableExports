@@ -42,8 +42,8 @@ namespace XTendableExports.data.Migrations
                 );
 
             context.Exports.AddOrUpdate(
-                new Export { Id = Guid.NewGuid(), Name = "GeneralHospitals-AccountInfo", Delimeter = "|", Fields = "Account~*,Patient~LastName/FirstName/MiddleName", FileNameFormat = "yyyymmdd-gh.data.dat" },
-                new Export { Id = Guid.NewGuid(), Name = "VeteransHospital-AccountFacilityInfo", Delimeter = ",", Fields = "Facility~*~[unique],Account~*,Insurance~*,Patient~SocialSecurityNumber", FileNameFormat = "yyyymmdd-gh.data.bat" }
+                new Export { Id = Guid.NewGuid(), Name = "GeneralHospitals-AccountInfo", Delimeter = "|", Fields = "Account^Id,ClientId,AccountNumber,Balance,FacilityId,AdminDate,PatientId,DischargeDate~Patient^LastName,FirstName*1", FileNameFormat = "yyyyMMdd-gh.data.dat" }
+                //new Export { Id = Guid.NewGuid(), Name = "VeteransHospital-AccountFacilityInfo", Delimeter = ",", Fields = "Facility~*~[unique],Account~*,Insurance~*,Patient~SocialSecurityNumber", FileNameFormat = "yyyymmdd-gh.data.bat" }
                 );
         }
     }

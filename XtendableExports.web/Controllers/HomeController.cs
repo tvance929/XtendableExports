@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -38,13 +39,15 @@ namespace XtendableExports.Controllers
         }
 
         [HttpGet]
-        public async Task GetExport(string id)
+        public async Task GetExport(string id, string fileNameFormat)
         {
             var byteFile = await this.exportFileService.GetExportFileAsync(id, User.Identity.GetUserName());
-
+            var fileDateFormat = fileNameFormat.Substring(0, 8);
+            var fileDate = DateTime.Now.ToString(fileDateFormat);
+            
             Response.Clear();
             Response.ContentType = "application/force-download";
-            Response.AddHeader("content-disposition", "attachment; filename=file.txt");
+            Response.AddHeader("content-disposition", $"attachment; filename={fileDate}{fileNameFormat.Substring(8)}");
             Response.BinaryWrite(byteFile);
             Response.End();
         }

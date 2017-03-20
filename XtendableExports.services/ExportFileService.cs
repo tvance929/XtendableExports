@@ -19,7 +19,7 @@ namespace XtendableExports.services
         IInsuranceRepository insuranceRepository;
         IAccountInsuranceRepository accountInsuranceRepository;
 
-        public ExportFileService(IExportRepository exportRepository, IAccountRepository accountRepository, 
+        public ExportFileService(IExportRepository exportRepository, IAccountRepository accountRepository,
             IPatientRepository patientRepository, IClientRepository clientRepository, IFacilityRepository facilityRepository, IInsuranceRepository insuranceRepository, IAccountInsuranceRepository accountInsuranceRepository)
         {
             this.exportRepository = exportRepository;
@@ -38,7 +38,9 @@ namespace XtendableExports.services
             if (String.IsNullOrWhiteSpace(loggedInUserName)) throw new ArgumentNullException(nameof(loggedInUserName));
 
             var export = await this.exportRepository.GetAsync(new Guid(exportId));
-            
+            var delimeter = export.Delimeter;
+            var fields = ParseFields(export.Fields);
+
             MemoryStream ms = new MemoryStream();
             TextWriter tw = new StreamWriter(ms);
             tw.WriteLine("Line 1");
@@ -49,6 +51,46 @@ namespace XtendableExports.services
             ms.Close();
 
             return bytes;
+        }
+
+        private List<TablesWithColumns> ParseFields(string encodedFields)
+        {
+            var tablesWithColumnsString = encodedFields.Split('~');
+            var tablesWithColumnsList = new List<TablesWithColumns>();
+
+            foreach (var table in tablesWithColumnsString)
+            {
+                var tableWithColumns = new TablesWithColumns();
+                tableWithColumns.table = table.Split('^')[0];
+
+                foreach (var column in table.Split('^')[1].Split(','))
+                {
+                    if (column.Contains('*'))
+                    {
+                        tableWithColumns.substrings.Add(column);
+                        tableWithColumns.columns.Add(column.Split('*')[0]);
+                    }
+                    else
+                    {
+                        tableWithColumns.columns.Add(column);
+                    }
+                }
+                tablesWithColumnsList.Add(tableWithColumns);
+            }
+            return tablesWithColumnsList;
+        }
+    }
+
+    internal class TablesWithColumns
+    {
+        public string table { get; set; }
+        public List<string> columns { get; set; }
+        public List<string> substrings { get; set; }
+
+        public TablesWithColumns()
+        {
+            columns = new List<string>();
+            substrings = new List<string>();
         }
     }
 }

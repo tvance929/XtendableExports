@@ -47,7 +47,7 @@
 
         $('#btnPremadeExports').on('click', function () {
             if ($('#ddPremadeExports').val() != '') {
-                window.location = '/Home/GetExport?id=' + $('#ddPremadeExports').val();
+                window.location = '/Home/GetExport?id=' + $('#ddPremadeExports').val() + '&fileNameFormat=' + $('#ddPremadeExports option:selected').attr('data-filenameformat');
             }
             return false;
         })
